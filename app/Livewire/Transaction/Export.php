@@ -14,7 +14,7 @@ class Export extends Component
         $this->validate([
             'month' => 'required'
         ]);
-        return Excel::download(new TransactionExport($this->month), 'laporan transaksi {$this->month}.xlsx'); 
+        return Excel::download(new TransactionExport($this->month), "laporan transaksi {$this->month}.xlsx"); 
     }
     public function render()
     {
